@@ -1,12 +1,12 @@
 Configuration DemoConfig
 {
-    Import-DscResource -ModuleName MOFBasedExampleDsc
+    Import-DscResource -ModuleName ClassBasedExampleDsc
 
     node localhost
     {
-        BasicResourceDemo Example 
+        BasicClassResourceDemo Example 
         {
-            Path = "C:\temp\example1.txt"
+            Path = "C:\temp\example2.txt"
         }
     }
 }
