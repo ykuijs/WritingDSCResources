@@ -1,0 +1,5 @@
+[ClassVersion("1.0.0.0"), FriendlyName("BasicResourceDemo")]
+class DEMO_BasicResourceDemo : OMI_BaseResource
+{
+    [Key, Description("A path to create an example text file at")] string Path;    
+};
