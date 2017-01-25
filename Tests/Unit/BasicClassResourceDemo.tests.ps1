@@ -1,6 +1,6 @@
 using module "..\..\Modules\ClassBasedExampleDsc\DSCResources\BasicClassResourceDemo.psm1"
 
-Describe -Name "BasicClassResourceDemo tests" -Fixture {
+Describe -Name "BasicClassResourceDemo unit tests" -Fixture {
     InModuleScope -ModuleName "BasicClassResourceDemo" -ScriptBlock {
         Context "The text file at 'Path' exists" {
             $resource = [BasicClassResourceDemo]::new()

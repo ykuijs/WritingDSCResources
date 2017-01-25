@@ -14,7 +14,7 @@
             "request": "attach",
             "name": "PowerShell Attach to Host Process",
             "processId": "${command.PickPSHostProcess}",
-            "runspaceId": 1
+            "runspaceId": 15
         },
         {
             "type": "PowerShell",

@@ -1,6 +1,6 @@
 Import-Module (Join-Path -Path $PSScriptRoot -ChildPath "..\..\Modules\MOFBasedExampleDsc\DSCResources\DEMO_BasicResourceDemo\DEMO_BasicResourceDemo.psm1" -Resolve)
 
-Describe -Name "BasicResourceDemo tests" -Fixture {
+Describe -Name "BasicResourceDemo unit tests" -Fixture {
     InModuleScope -ModuleName "DEMO_BasicResourceDemo" -ScriptBlock {
         Context "The text file at 'Path' exists" {
             $testParams = @{

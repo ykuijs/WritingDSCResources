@@ -17,7 +17,8 @@ $attributes += New-xDscResourceProperty -Name "Ensure" `
                                         -Attribute "Write" `
                                         -ValidateSet "Present", "Absent"
 
-$outputPath = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath("..\Modules\GeneratedExamplesDsc")
+$targetPath = "..\Modules\GeneratedExamplesDsc"
+$outputPath = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($targetPath)
 
 if ((Test-Path -Path $outputPath -ErrorAction SilentlyContinue) -eq $true)
 {
