@@ -1,0 +1,15 @@
+[ClassVersion("1.0.0.0")]
+Class DEMO_ChildDataType
+{
+    [Key, Description("Name of the account")] String Username;
+    [Write, Description("Permission level of the account"), ValueMap{"Deny All","Deny Write","Full Read","Full Control"}, Values{"Deny All","Deny Write","Full Read","Full Control"}] String PermissionLevel;
+    [Write, Description("Specifies if the account is allowed to act as a system account")] Boolean ActAsSystemAccount;
+};
+
+[ClassVersion("1.0.0.0"), FriendlyName("ComplexTypeDemo")]
+class DEMO_ComplexTypeDemo : OMI_BaseResource
+{
+    [Key, Description("A path to create an example text file at")] string Path;
+    [Required, Description("An example of how to use a complex type"), EmbeddedInstance("DEMO_ChildDataType")] String ComplexObjects[];
+};
+
