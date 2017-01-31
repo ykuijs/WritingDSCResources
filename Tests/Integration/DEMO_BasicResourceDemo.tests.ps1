@@ -30,7 +30,7 @@ Describe -Name "BasicResourceDemo integration tests" -Fixture {
             IntegrationTest1 -OutputPath $MofPath
             Start-DscConfiguration -Path $MofPath -Wait -Force
 
-            Test-DscConfiguration -Path $MofPath | Should Be $true
+            (Test-DscConfiguration -Path $MofPath).InDesiredState | Should Be $true
         }
     }
 }
